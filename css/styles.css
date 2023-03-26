@@ -163,12 +163,11 @@ body {
     font-weight: 700;
     background-color: var(--neutral-color-4);
     color: var(--neutral-color-1);
-    transition: 0.3s;
     cursor: pointer;
 }
 
 .results-summary-component .summary button:hover {
-    opacity: 0.8;
+    background: var(--background-gradient);
 }
 
 /* Small screens optimizations */
