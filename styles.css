@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+/* Common Rules */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --background-gradient: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    --circle-gradient: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    --primary-color-1: hsla(0, 100%, 67%, 100%);
+    --primary-color-2: hsla(39, 100%, 56%, 100%);
+    --primary-color-3: hsla(166, 100%, 37%, 100%);
+    --primary-color-4: hsla(234, 85%, 45%, 100%);
+    --neutral-color-1: hsl(0, 0%, 100%);
+    --neutral-color-2: hsl(221, 100%, 96%);
+    --neutral-color-3: hsl(241, 100%, 89%);
+    --neutral-color-4: hsl(224, 30%, 27%);
+    --text-font-size: 18px;
+}
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: var(--text-font-size);
+}
+
+/* Results summary component */
+.results-summary-component {
+    width: 700px;
+    margin: 100px auto;
+    display: flex;
+    box-shadow: 10px 20px 20px hsla(234, 85%, 45%, 10%);
+    border-radius: 30px 0 30px 30px;
+}
+
+/* Results side */
+.results-summary-component .results {
+    background: var(--background-gradient);
+    padding: 50px;
+    width: 350px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: var(--neutral-color-3);
+}
+
+.results-summary-component .results h4 {
+    font-size: 24px;
+}
+
+.results-summary-component .results .circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--circle-gradient);
+    padding: 50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.results-summary-component .results .circle span {
+    color: var(--neutral-color-1);
+    font-size: 64px;
+    font-weight: 800;
+}
+
+.results-summary-component .results h5 {
+    color: var(--neutral-color-1);
+    font-size: 32px;
+}
+
+.results-summary-component .results p {
+    margin: 10px;
+}
+
+/* Summary side */
+.results-summary-component .summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 30px;
+    width: 350px;
+}
+
+.results-summary-component .summary h4 {
+    color: var(--neutral-color-4);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.results-summary-component .summary .card {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: 700;
+}
+.card .category {
+    display: flex;
+    align-items: center;
+}
+.card .category i {
+    padding-right: 10px;
+}
+.card:nth-of-type(1) {
+    background-color: hsla(0, 100%, 67%, 10%);
+}
+.card:nth-of-type(1) .category {
+    color: var(--primary-color-1);
+}
+.card:nth-of-type(1) .category i {
+    content: url('/assets/images/icon-reaction.svg');
+}
+.card:nth-of-type(2) {
+    background-color: hsla(39, 100%, 56%, 10%);
+}
+.card:nth-of-type(2) .category {
+    color: var(--primary-color-2);
+}
+.card:nth-of-type(2) .category i {
+    content: url('/assets/images/icon-memory.svg');
+}
+.card:nth-of-type(3) {
+    background-color: hsla(166, 100%, 37%, 10%);
+}
+.card:nth-of-type(3) .category {
+    color: var(--primary-color-3);
+}
+.card:nth-of-type(3) .category i {
+    content: url('/assets/images/icon-verbal.svg');
+}
+.card:nth-of-type(4) {
+    background-color: hsla(234, 85%, 45%, 10%);
+}
+.card:nth-of-type(4) .category {
+    color: var(--primary-color-4);
+}
+.card:nth-of-type(4) .category i {
+    content: url('/assets/images/icon-visual.svg');
+}
+
+.results-summary-component .summary .card .category-result {
+    color: gray;
+}
+
+.results-summary-component .summary .card .category-result span {
+    color: var(--neutral-color-4);
+}
+
+.results-summary-component .summary button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    border: 0;
+    font-weight: 700;
+    background-color: var(--neutral-color-4);
+    color: var(--neutral-color-1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.results-summary-component .summary button:hover {
+    opacity: 0.8;
+}
+
+/* Small screens optimizations */
+@media (max-width: 700px) {
+    .results-summary-component {
+        flex-direction: column;
+        margin: 0;
+        box-shadow: none;
+        width: 100vw;
+    }
+    .results-summary-component .results {
+        width: 100vw;
+        border-radius: 0 0 30px 30px;
+    }
+    .results-summary-component .summary {
+        width: 100vw;
+    }
+}
